@@ -1,3 +1,4 @@
+//--------------------------------------------------
 // metoda z zastosowaniem "else if":
 
 for (i = 1; i <= 100; i++) {
@@ -7,7 +8,7 @@ for (i = 1; i <= 100; i++) {
 	else console.log(i);
 }
 
-
+//--------------------------------------------------
 // metoda ze stringiem:
 
 var outcome = "";
