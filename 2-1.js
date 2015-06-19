@@ -1,4 +1,4 @@
-//--------------------------------------------------
+/*//--------------------------------------------------
 //opcja pierwsza, z petla "do while"
 
 var hashTag = "#";
@@ -9,12 +9,12 @@ do {
 
 
 
-//--------------------------------------------------
+//--------------------------------------------------*/
 //z petla "for"
 
-var hashTag = "#";
-for (counter = 1; counter <= 7; counter++) {
+var hashTag = "";
+for (hashTag = "#"; hashTag.length <= 7; hashTag += "#") {
 	console.log(hashTag);
-	hashTag += "#";
+//	hashTag += "#";
 }
 

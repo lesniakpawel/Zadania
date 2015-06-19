@@ -1,4 +1,4 @@
-var fizzBuzz = function(n) {
+fizzBuzz = function(n) {
 	var outcome = "";
 	for (i = 1; i <= n; i++) {
 		if (i % 3 == 0) {
@@ -12,4 +12,4 @@ var fizzBuzz = function(n) {
 	}	
 }
 //example call:
-fizzBuzz(65);
+console.log(fizzBuzz(65));
