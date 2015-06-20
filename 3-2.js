@@ -1,11 +1,12 @@
 function isEven(number) {	
-	if (number == 0) {
+	(number < 0) ? number *= -1 : number;
+	if (number === 0) {
 		return true;
 	}
-	else if (number == 1) {
+	if (number === 1) {
 		return false;
 	}
-	else return (number < 0 ? isEven(number + 2) : isEven(number - 2));
+	return isEven(number - 2);
 }
 
-console.log(isEven(-51));
+console.log(isEven(-55));

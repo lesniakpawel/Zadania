@@ -1,7 +1,7 @@
 function countBs(someString) {
-	amountOfBs = 0;
+	var amountOfBs = 0;
 	for (i = 0; i <= someString.length - 1; i++) {
-		if (someString.charAt(i) == "B") {
+		if (someString.charAt(i) === "B") {
 			amountOfBs += 1;
 		}
 	}
@@ -9,9 +9,9 @@ function countBs(someString) {
 }
 
 function countChar(someString, someChar) {
-	amountOfChars = 0;
+	var amountOfChars = 0;
 	for (i = 0; i <= someString.length -1; i++)
-		if (someString.charAt(i) == someChar) {
+		if (someString.charAt(i) === someChar) {
 			amountOfChars += 1;
 		}
 	return amountOfChars;
