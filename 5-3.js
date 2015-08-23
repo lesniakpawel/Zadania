@@ -61,43 +61,29 @@ ancestry.forEach(function(person) {
   byCentury[Math.ceil(person.died / 100)].push(person.died - person.born)
 })
 
-for (century in byCentury) {
-  console.log(average(byCentury[century]).toFixed(1));
-}
+Object.keys(byCentury).forEach(function(element) {
+	console.log(average(byCentury[element]).toFixed(1));
+});
 
 //-----------------------------------------------------------------------
 //      bonus task - groupBy:
 //-----------------------------------------------------------------------
 
-function byCentury(list, object) {
-  list.forEach(function(p) {
-    var condition = Math.ceil(p.died / 100);
-    var result = p.died - p.born;
-    if (!([condition] in object)) {
-      object[condition] = [];
+function groupBy(array, compare) {
+  var group = {};
+  array.forEach(function(element) {
+  var value = compare(element);
+    if(!group[value]) {
+      group[value] = [];
     }
-    object[condition].push(result);
-  })
-  return object;
+    group[value].push(element);
+  });
+  return group;
 }
 
-function byLifeLength(list, object) {
-  list.forEach(function(p) {
-    var condition = p.died - p.born;
-    var result = p.name;
-    if (!([condition] in object)) {
-      object[condition] = [];
-    }
-    object[condition].push(result)
-  })
-  return object;
-}
+var outcome = groupBy(ancestry, function(element) {
+ return Math.ceil(element.died/100);
+});
 
-function groupBy(array, f) {
-  var outcome = {};
-  return f(array, outcome);
-}
-
-console.log();
-console.log((groupBy(ancestry, byLifeLength)))
+console.log(outcome);
 
